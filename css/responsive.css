@@ -1,0 +1,659 @@
+/* ==========================================================================
+   SPORTZONE - RESPONSIVE STYLES & MEDIA QUERIES
+   ========================================================================== */
+
+/* Large Tablets & Small Desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 1.25rem;
+  }
+
+  .main-nav {
+    gap: 1.25rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .top-bar-links {
+    display: none;
+  }
+
+  .main-nav {
+    display: none; /* Hidden on tablet & mobile, replaced by mobile drawer */
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-search {
+    max-width: 240px;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Quick View Modal */
+  .quickview-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .quickview-img {
+    max-height: 280px;
+  }
+
+  /* Compare Bar */
+  .compare-bar-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .compare-items-preview {
+    justify-content: center;
+  }
+  .compare-actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  :root {
+    --space-3xl: 3rem;
+    --space-2xl: 2rem;
+    --container-padding: 1rem;
+  }
+
+  .header-inner {
+    height: 64px;
+  }
+
+  .header-search {
+    display: none; /* Can be opened via search trigger in mobile drawer or expanded bar */
+  }
+
+  .brand-logo {
+    font-size: 1.35rem;
+  }
+
+  .brand-logo .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  /* Toast Notification */
+  .toast-container {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    max-width: none;
+  }
+
+  /* Floating Back-to-Top */
+  .back-to-top {
+    bottom: 16px;
+    left: 16px;
+    width: 38px;
+    height: 38px;
+  }
+}
+
+/* Small Mobile Devices (max-width: 575px) */
+@media (max-width: 575px) {
+  .grid-4, .grid-3 {
+    grid-template-columns: 1fr;
+  }
+
+  /* On product listings, 2 columns on mobile looks great for e-commerce */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  .product-card-body {
+    padding: 0.75rem 0.65rem 0.85rem;
+  }
+
+  .product-card-title {
+    font-size: 0.825rem;
+    height: 2.4rem;
+  }
+
+  .product-card-price {
+    font-size: 0.95rem;
+  }
+
+  .product-card-oldprice {
+    font-size: 0.7rem;
+  }
+
+  .product-card-add-btn {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .product-card-actions {
+    display: flex;
+    opacity: 1; /* Always visible on mobile touch */
+    transform: none;
+  }
+
+  .product-card-quickview {
+    display: none; /* Hide hover button on touch, user can tap card */
+  }
+
+  .modal-dialog {
+    max-height: 94vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal-body {
+    padding: 1rem;
+  }
+
+  .modal-header, .modal-footer {
+    padding: 0.85rem 1rem;
+  }
+}
+
+/* ========================================================================== 
+   MOBILE STABILITY PATCH — iOS Safari, narrow screens, touch interactions
+   Kept at the end so it only overrides responsive presentation, not page logic.
+   ========================================================================== */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+  scroll-padding-top: 76px;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.container,
+.container-fluid,
+.site-header,
+main,
+section,
+footer {
+  min-width: 0;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* The backdrop must sit BEHIND the drawer. The old z-index order could put it
+   above the drawer and intercept taps on the close button and menu links. */
+.mobile-drawer-overlay {
+  z-index: 9998;
+  touch-action: manipulation;
+}
+
+.mobile-drawer {
+  z-index: 9999;
+  width: min(340px, 88vw);
+  max-width: 88vw;
+  height: 100vh;
+  height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-drawer-body {
+  min-height: 0;
+  padding: 1rem;
+  padding-bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobile-drawer-header {
+  padding: 1rem;
+  padding-top: max(1rem, env(safe-area-inset-top, 0px));
+  flex-shrink: 0;
+}
+
+.mobile-drawer-close,
+.mobile-menu-toggle,
+.header-action-btn {
+  flex-shrink: 0;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-drawer-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+}
+
+.mobile-nav-link {
+  min-height: 44px;
+  padding: 0.75rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.mobile-drawer-search {
+  display: block !important;
+  width: 100%;
+  max-width: none !important;
+  margin: 0 0 0.5rem;
+  flex-shrink: 0;
+}
+
+.mobile-drawer-search .search-input-wrapper,
+.mobile-drawer-search .search-input {
+  width: 100%;
+  min-width: 0;
+}
+
+/* Avoid a cramped header and preserve comfortable touch targets on iPhones. */
+@media (max-width: 767px) {
+  :root {
+    --container-padding: 1rem;
+  }
+
+  .header-inner {
+    min-width: 0;
+    gap: 0.5rem;
+    height: 64px;
+  }
+
+  .brand-logo {
+    min-width: 0;
+    gap: 0.4rem;
+    font-size: clamp(1.05rem, 4.3vw, 1.35rem);
+    white-space: nowrap;
+  }
+
+  .brand-logo .logo-icon {
+    flex: 0 0 auto;
+  }
+
+  .header-actions {
+    gap: 0.25rem;
+    margin-left: auto;
+  }
+
+  .header-action-btn {
+    width: 40px;
+    height: 44px;
+    min-width: 40px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-slider {
+    height: clamp(430px, 112vw, 520px);
+    min-height: 430px;
+  }
+
+  .hero-slide {
+    background-position: center center;
+    background-size: cover;
+  }
+
+  .hero-slide-overlay {
+    background: linear-gradient(90deg, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.58));
+  }
+
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 1rem;
+    /* Reserve a dedicated bottom row for carousel controls on touch screens. */
+    padding-bottom: 6.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 8.2vw, 2.8rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .hero-description {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    max-width: 42rem;
+  }
+
+  .hero-actions {
+    gap: 0.65rem;
+  }
+
+  .hero-actions .btn {
+    min-height: 44px;
+    white-space: normal;
+  }
+
+  .hero-slider-nav {
+    left: 1rem;
+    right: 1rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+    min-height: 40px;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    z-index: 5;
+  }
+
+  /* Keep the slide indicators in their own bottom row, never over the quiz CTA. */
+  .hero-slider-nav .slider-dots {
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 0;
+  }
+
+  .hero-slider-nav .slider-dot {
+    flex: 0 0 28px;
+  }
+
+  .hero-slider-nav .slider-dot.is-active {
+    flex-basis: 42px;
+  }
+
+  .hero-slider-nav .slider-arrow-btn {
+    flex: 0 0 38px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .section-title,
+  .page-title {
+    overflow-wrap: anywhere;
+  }
+
+  .breadcrumb {
+    flex-wrap: wrap;
+    row-gap: 0.35rem;
+  }
+
+  .form-control,
+  input,
+  select,
+  textarea {
+    max-width: 100%;
+  }
+
+  /* iOS Safari zooms form fields smaller than 16px on focus. */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .table-responsive,
+  .cart-table-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 575px) {
+  .container,
+  .container-fluid {
+    padding-left: max(0.875rem, env(safe-area-inset-left, 0px));
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px));
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.65rem !important;
+  }
+
+  .product-card {
+    min-width: 0;
+  }
+
+  .product-card-thumb {
+    aspect-ratio: 1 / 1;
+  }
+
+  .product-card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .product-card-title {
+    height: auto;
+    min-height: 2.4rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+  }
+
+  .product-card-body {
+    min-width: 0;
+  }
+
+  .product-card-price,
+  .product-card-oldprice {
+    overflow-wrap: anywhere;
+  }
+
+  .product-card-add-btn {
+    min-height: 40px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  .filter-sidebar {
+    width: min(320px, 90vw) !important;
+    max-width: 90vw;
+    max-height: 100vh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .modal-dialog {
+    width: calc(100vw - 1.25rem);
+    max-width: calc(100vw - 1.25rem);
+    max-height: calc(100dvh - 1.25rem);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .compare-bar {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: max(0.5rem, env(safe-area-inset-bottom, 0px));
+  }
+
+  .compare-bar-inner {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .header-inner {
+    gap: 0.25rem;
+  }
+
+  .brand-logo {
+    font-size: 1rem;
+  }
+
+  .brand-logo .logo-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header-actions {
+    gap: 0;
+  }
+
+  .header-action-btn {
+    width: 36px;
+    min-width: 36px;
+  }
+
+  .hero-title {
+    font-size: 1.9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .mobile-drawer,
+  .mobile-drawer-overlay,
+  .hero-slide,
+  .product-card {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Sport Finder quiz: prevent option buttons from overflowing on mobile/iOS. */
+@media (max-width: 767px) {
+  #sportfinder-modal {
+    align-items: center;
+    padding: max(0.5rem, env(safe-area-inset-top, 0px)) 0.5rem max(0.5rem, env(safe-area-inset-bottom, 0px));
+    overflow-y: auto;
+  }
+
+  #sportfinder-modal .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    max-height: calc(100dvh - 1rem - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px));
+    overflow-x: hidden;
+  }
+
+  #sportfinder-modal .modal-header {
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+
+  #sportfinder-modal .modal-title {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+    line-height: 1.3;
+  }
+
+  #sportfinder-modal .modal-close {
+    flex: 0 0 32px;
+  }
+
+  #sportfinder-modal #q-sport-group,
+  #sportfinder-modal #q-level-group,
+  #sportfinder-modal #q-budget-group {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    min-width: 0;
+  }
+
+  #sportfinder-modal .quiz-opt {
+    min-width: 0;
+    max-width: 100%;
+    min-height: 48px;
+    padding: 0.65rem 0.5rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-height: 1.3;
+    font-size: 0.9rem;
+  }
+
+  #sportfinder-modal #btn-submit-quiz {
+    white-space: normal;
+    min-height: 48px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 380px) {
+  #sportfinder-modal .modal-body {
+    padding: 0.75rem;
+  }
+
+  #sportfinder-modal #q-sport-group,
+  #sportfinder-modal #q-level-group,
+  #sportfinder-modal #q-budget-group {
+    gap: 0.5rem !important;
+  }
+
+  #sportfinder-modal .quiz-opt {
+    font-size: 0.82rem;
+    padding: 0.6rem 0.35rem;
+  }
+}
+
+
+/* HOTFIX v5: keep the product-filter backdrop behind the filter drawer.
+   The navigation overlay has a high stacking level for the main menu; the
+   product filter reuses the same class, so scope its stacking order by ID. */
+#filter-drawer-overlay {
+  z-index: var(--z-backdrop, 300) !important;
+}
+
+@media (max-width: 991px) {
+  .filter-sidebar {
+    z-index: var(--z-modal, 400) !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .filter-sidebar {
+    width: min(320px, 90vw) !important;
+    max-width: 90vw;
+    height: 100vh;
+    height: 100dvh;
+    max-height: 100dvh;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

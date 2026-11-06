@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SPORTZONE - Thương hiệu thời trang và dụng cụ thể thao cao cấp chính hãng. Train Hard. Play Strong." />
+  <title>SPORTZONE - Train Hard. Play Strong. | Đồ Thể Thao Cao Cấp</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/home.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Thông báo đầu trang">
+    <div class="container">
+      <div class="top-bar-message">
+        <i class="fa-solid fa-bolt text-primary"></i>
+        <span>Flash Sale hè rực lửa: Giảm tới <span class="highlight">50%</span> các dòng giày chạy bộ</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:1900888999"><i class="fa-solid fa-phone"></i> Hotline: 1900 888 999</a>
+        <a href="contact.html"><i class="fa-solid fa-location-dot"></i> Tìm cửa hàng</a>
+        <a href="javascript:void(0)" onclick="Modal.openSizeGuide()"><i class="fa-solid fa-ruler"></i> Bảng Size</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="SPORTZONE Trang chủ">
+          <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+          <span>SPORT<span class="logo-accent">ZONE</span></span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" aria-label="Thanh điều hướng chính">
+          <a href="index.html" class="nav-link active">Trang Chủ</a>
+          <a href="products.html" class="nav-link">Sản Phẩm</a>
+          <a href="products.html?category=Shoes" class="nav-link">Giày</a>
+          <a href="products.html?category=Clothing" class="nav-link">Quần Áo</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
+        </nav>
+
+        <!-- Live Search Bar -->
+        <div class="header-search">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="search-input" placeholder="Tìm giày, áo đấu, bóng đá..." aria-label="Tìm kiếm sản phẩm" />
+          </div>
+        </div>
+
+        <!-- Header Action Icons -->
+        <div class="header-actions">
+          <!-- Wishlist Trigger -->
+          <a href="wishlist.html" class="header-action-btn" title="Sản phẩm yêu thích" aria-label="Danh sách yêu thích">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- Cart Trigger -->
+          <a href="cart.html" class="header-action-btn" title="Giỏ hàng của bạn" aria-label="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- User Account Trigger -->
+          <a href="login.html" class="header-action-btn user-auth-link" title="Tài khoản" aria-label="Tài khoản người dùng">
+            <i class="fa-regular fa-user"></i>
+          </a>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="header-action-btn mobile-menu-toggle" aria-label="Mở menu điều hướng trên di động">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer" aria-label="Menu di động">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size: 1.25rem;">
+        <div class="logo-icon" style="width: 30px; height: 30px;"><i class="fa-solid fa-person-running"></i></div>
+        <span>SPORT<span class="logo-accent">ZONE</span></span>
+      </div>
+      <button class="mobile-drawer-close" aria-label="Đóng menu"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <div class="header-search" style="display: block; max-width: 100%; margin-bottom: 0.5rem;">
+        <div class="search-input-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" class="search-input" placeholder="Tìm kiếm sản phẩm..." />
+        </div>
+      </div>
+      <a href="index.html" class="mobile-nav-link active"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+      <a href="products.html" class="mobile-nav-link"><i class="fa-solid fa-shapes"></i> Tất Cả Sản Phẩm</a>
+      <a href="products.html?category=Shoes" class="mobile-nav-link"><i class="fa-solid fa-shoe-prints"></i> Giày Thể Thao</a>
+      <a href="products.html?category=Clothing" class="mobile-nav-link"><i class="fa-solid fa-shirt"></i> Quần Áo Thể Thao</a>
+      <a href="products.html?category=Football" class="mobile-nav-link"><i class="fa-solid fa-futbol"></i> Bóng Đá</a>
+      <a href="products.html?category=Basketball" class="mobile-nav-link"><i class="fa-solid fa-basketball"></i> Bóng Rổ</a>
+      <a href="products.html?category=Gym" class="mobile-nav-link"><i class="fa-solid fa-dumbbell"></i> Dụng Cụ Gym</a>
+      <a href="wishlist.html" class="mobile-nav-link"><i class="fa-solid fa-heart"></i> Sản Phẩm Yêu Thích</a>
+      <a href="cart.html" class="mobile-nav-link"><i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng</a>
+      <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-users"></i> Về SPORTZONE</a>
+      <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-envelope"></i> Liên Hệ</a>
+      <div style="border-top: 1px solid var(--border-color); padding-top: 1rem; margin-top: auto;">
+        <a href="login.html" class="btn btn-primary btn-block"><i class="fa-regular fa-user"></i> Đăng Nhập / Đăng Ký</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Hero Slider Section -->
+  <section class="hero-slider-section" aria-label="Banner quảng bá">
+    <div class="hero-slider">
+      <!-- Slide 1 -->
+      <div class="hero-slide is-active" style="background-image: url('assets/images/banners/home/home-hero-running.jpg');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container" style="height: 100%; display: flex; align-items: center;">
+          <div class="hero-content">
+            <div class="hero-subtitle-badge">
+              <i class="fa-solid fa-fire"></i> Bộ Sưu Tập Mới 2026
+            </div>
+            <h1 class="hero-title">Bứt Phá Giới Hạn <span>Chinh Phục</span> Mọi Đỉnh Cao</h1>
+            <p class="hero-description">
+              Khám phá các dòng giày chạy bộ đệm nảy Zoom Air và trang phục thể thao công nghệ thoát nhiệt đỉnh cao từ Nike, Adidas, Puma.
+            </p>
+            <div class="hero-actions">
+              <a href="products.html" class="btn btn-primary btn-lg">
+                <i class="fa-solid fa-bag-shopping"></i> Mua Ngay
+              </a>
+              <button type="button" class="btn btn-outline btn-lg" style="color: #ffffff; border-color: rgba(255,255,255,0.4);" onclick="Modal.openSportFinder()">
+                <i class="fa-solid fa-wand-magic-sparkles text-primary"></i> Tìm Đồ Phù Hợp (Quiz)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide" style="background-image: url('assets/images/banners/home/home-hero-training.jpg');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container" style="height: 100%; display: flex; align-items: center;">
+          <div class="hero-content">
+            <div class="hero-subtitle-badge">
+              <i class="fa-solid fa-medal"></i> Tiêu Chuẩn Thi Đấu Quốc Tế
+            </div>
+            <h2 class="hero-title">Đam Mê Sân Cỏ <span>Bóng Đá & Bóng Rổ</span> Đỉnh Cao</h2>
+            <p class="hero-description">
+              Sở hữu giày đinh bám sân, găng tay thủ môn Predator và bóng thi đấu FIFA Quality Pro với mức ưu đãi tốt nhất.
+            </p>
+            <div class="hero-actions">
+              <a href="products.html?category=Football" class="btn btn-primary btn-lg">
+                Khám Phá Sân Cỏ
+              </a>
+              <a href="products.html?category=Basketball" class="btn btn-secondary btn-lg">
+                Bóng Rổ Chuyên Nghiệp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide" style="background-image: url('assets/images/banners/home/home-hero-sports.jpg');">
+        <div class="hero-slide-overlay"></div>
+        <div class="container" style="height: 100%; display: flex; align-items: center;">
+          <div class="hero-content">
+            <div class="hero-subtitle-badge">
+              <i class="fa-solid fa-dumbbell"></i> Dụng Cụ Gym & Thể Hình
+            </div>
+            <h2 class="hero-title">Train Hard <span>Play Strong</span> Mỗi Ngày</h2>
+            <p class="hero-description">
+              Đầy đủ dụng cụ tập luyện tại nhà và phòng tập: Dây kháng lực, con lăn bụng, đai lưng nâng tạ và thảm yoga chống trượt.
+            </p>
+            <div class="hero-actions">
+              <a href="products.html?category=Gym" class="btn btn-primary btn-lg">
+                Dụng Cụ Gym
+              </a>
+              <a href="products.html" class="btn btn-outline btn-lg" style="color:#ffffff; border-color: rgba(255,255,255,0.4);">
+                Xem Toàn Bộ Kho
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Navigation Controls -->
+    <div class="hero-slider-nav">
+      <div class="slider-dots">
+        <span class="slider-dot is-active" aria-label="Slide 1"></span>
+        <span class="slider-dot" aria-label="Slide 2"></span>
+        <span class="slider-dot" aria-label="Slide 3"></span>
+      </div>
+      <div style="display: flex; gap: 0.4rem; margin-left: 0.5rem;">
+        <button class="slider-arrow-btn slider-prev" aria-label="Slide trước"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="slider-arrow-btn slider-next" aria-label="Slide tiếp"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Categories Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Danh Mục Nổi Bật</span>
+        <h2 class="section-title">Chọn Môn Thể Thao Của Bạn</h2>
+        <p class="section-subtitle">
+          Tìm kiếm nhanh chóng trang thiết bị chuyên dụng được phân chia khoa học theo từng bộ môn.
+        </p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Cat 1: Running -->
+        <a href="products.html?category=Shoes" class="category-card">
+          <img src="assets/images/categories/running/category-running.jpg" alt="Running" class="category-card-img" loading="lazy" />
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <div class="category-card-icon"><i class="fa-solid fa-person-running"></i></div>
+            <h3 class="category-card-title">Chạy Bộ</h3>
+            <span class="category-card-count">48+ Sản phẩm</span>
+          </div>
+        </a>
+
+        <!-- Cat 2: Football -->
+        <a href="products.html?category=Football" class="category-card">
+          <img src="assets/images/categories/football/category-football.jpg" alt="Football" class="category-card-img" loading="lazy" />
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <div class="category-card-icon"><i class="fa-solid fa-futbol"></i></div>
+            <h3 class="category-card-title">Bóng Đá</h3>
+            <span class="category-card-count">32+ Sản phẩm</span>
+          </div>
+        </a>
+
+        <!-- Cat 3: Basketball -->
+        <a href="products.html?category=Basketball" class="category-card">
+          <img src="assets/images/categories/basketball/category-basketball.jpg" alt="Basketball" class="category-card-img" loading="lazy" />
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <div class="category-card-icon"><i class="fa-solid fa-basketball"></i></div>
+            <h3 class="category-card-title">Bóng Rổ</h3>
+            <span class="category-card-count">24+ Sản phẩm</span>
+          </div>
+        </a>
+
+        <!-- Cat 4: Gym & Fitness -->
+        <a href="products.html?category=Gym" class="category-card">
+          <img src="assets/images/categories/gym/category-gym.jpg" alt="Gym" class="category-card-img" loading="lazy" />
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <div class="category-card-icon"><i class="fa-solid fa-dumbbell"></i></div>
+            <h3 class="category-card-title">Gym & Fitness</h3>
+            <span class="category-card-count">56+ Sản phẩm</span>
+          </div>
+        </a>
+
+        <!-- Cat 5: Tennis -->
+        <a href="products.html?category=Accessories" class="category-card">
+          <img src="assets/images/categories/tennis/category-tennis.jpg" alt="Tennis" class="category-card-img" loading="lazy" />
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <div class="category-card-icon"><i class="fa-solid fa-baseball-bat-ball"></i></div>
+            <h3 class="category-card-title">Tennis</h3>
+            <span class="category-card-count">18+ Sản phẩm</span>
+          </div>
+        </a>
+
+        <!-- Cat 6: Clothing -->
+        <a href="products.html?category=Clothing" class="category-card">
+          <img src="assets/images/categories/clothing/category-clothing.jpg" alt="Clothing" class="category-card-img" loading="lazy" />
+          <div class="category-card-overlay"></div>
+          <div class="category-card-content">
+            <div class="category-card-icon"><i class="fa-solid fa-shirt"></i></div>
+            <h3 class="category-card-title">Quần Áo</h3>
+            <span class="category-card-count">42+ Sản phẩm</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Flash Sale Countdown Section -->
+  <section class="container" aria-label="Khuyến mãi Flash Sale">
+    <div class="flash-sale-section">
+      <div class="flash-sale-header">
+        <div class="flash-sale-title-wrap">
+          <span class="flash-sale-badge"><i class="fa-solid fa-bolt"></i> HOT DEAL</span>
+          <h2 class="flash-sale-title">FLASH SALE GIỜ VÀNG</h2>
+        </div>
+
+        <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+          <span style="font-size: var(--font-sm); color: #cbd5e1;" id="fs-status-notice">Kết thúc sau:</span>
+          <!-- Countdown Timer Component -->
+          <div class="countdown-timer">
+            <div class="countdown-box">
+              <div class="countdown-number" id="fs-hours">08</div>
+              <div class="countdown-label">Giờ</div>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-box">
+              <div class="countdown-number" id="fs-mins">45</div>
+              <div class="countdown-label">Phút</div>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div class="countdown-box">
+              <div class="countdown-number" id="fs-secs">30</div>
+              <div class="countdown-label">Giây</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flash Sale 4 Products Grid -->
+      <div class="grid grid-4 product-grid" id="flash-sale-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section with Interactive Filter Tabs -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-star"></i> Sản Phẩm Hàng Đầu</span>
+        <h2 class="section-title">Sản Phẩm Nổi Bật</h2>
+        <p class="section-subtitle">
+          Những mẫu giày và trang phục thể thao được cộng đồng vận động viên đánh giá cao nhất.
+        </p>
+
+        <!-- Interactive Category Pills -->
+        <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 1.5rem;">
+          <button class="btn btn-sm btn-outline home-product-tab is-active btn-primary" data-cat="all">Tất Cả</button>
+          <button class="btn btn-sm btn-outline home-product-tab" data-cat="Shoes">Giày Thể Thao</button>
+          <button class="btn btn-sm btn-outline home-product-tab" data-cat="Clothing">Trang Phục</button>
+          <button class="btn btn-sm btn-outline home-product-tab" data-cat="Football">Bóng Đá</button>
+          <button class="btn btn-sm btn-outline home-product-tab" data-cat="Gym">Dụng Cụ Gym</button>
+        </div>
+      </div>
+
+      <!-- Featured 8 Products Grid -->
+      <div class="grid grid-4 product-grid" id="featured-products-grid">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="products.html" class="btn btn-outline-primary btn-lg">
+          Xem Tất Cả 24+ Sản Phẩm <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sport Finder Mini Quiz Teaser (Creative Feature) -->
+  <section class="container" style="margin-bottom: var(--space-3xl);" aria-label="Sport Finder Quiz">
+    <div class="sport-finder-banner">
+      <div class="sport-finder-content">
+        <span class="badge badge-sale" style="margin-bottom: 0.75rem;">AI Đề Xuất Độc Quyền</span>
+        <h2 class="sport-finder-title">Chưa biết nên chọn đồ tập nào? Thử ngay <span>Sport Finder</span></h2>
+        <p class="sport-finder-desc">
+          Chỉ mất 20 giây với 3 câu hỏi nhanh về môn thể thao, cường độ tập luyện và ngân sách, hệ thống sẽ đề xuất ngay sản phẩm chuẩn xác nhất cho bạn.
+        </p>
+        <button type="button" class="btn btn-primary btn-lg" onclick="Modal.openSportFinder()">
+          <i class="fa-solid fa-wand-magic-sparkles"></i> Khám Phá Ngay
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why SPORTZONE? (4 Features) -->
+  <section class="section" style="background-color: var(--surface-color); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="why-us-grid">
+        <div class="why-us-card">
+          <div class="why-us-icon-wrap"><i class="fa-solid fa-truck-fast"></i></div>
+          <h3 class="why-us-title">Giao Hàng Miễn Phí</h3>
+          <p class="why-us-desc">Miễn phí ship toàn quốc cho mọi đơn hàng từ 500.000₫. Giao siêu tốc 2h tại TP.HCM & Hà Nội.</p>
+        </div>
+
+        <div class="why-us-card">
+          <div class="why-us-icon-wrap"><i class="fa-solid fa-rotate-left"></i></div>
+          <h3 class="why-us-title">Đổi Trả Trong 30 Ngày</h3>
+          <p class="why-us-desc">Hỗ trợ đổi size hoặc hoàn tiền trong vòng 30 ngày nếu không vừa vặn hoặc chưa ưng ý.</p>
+        </div>
+
+        <div class="why-us-card">
+          <div class="why-us-icon-wrap"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="why-us-title">100% Chính Hãng</h3>
+          <p class="why-us-desc">Cam kết sản phẩm nhập khẩu chính hãng đầy đủ hóa đơn, đền gấp 10 lần nếu phát hiện hàng giả.</p>
+        </div>
+
+        <div class="why-us-card">
+          <div class="why-us-icon-wrap"><i class="fa-solid fa-credit-card"></i></div>
+          <h3 class="why-us-title">Thanh Toán An Toàn</h3>
+          <p class="why-us-desc">Hỗ trợ thanh toán khi nhận hàng (COD), thẻ Visa/Mastercard hoặc quét mã VietQR tự động.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Info -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+            <span>SPORT<span class="logo-accent">ZONE</span></span>
+          </a>
+          <p>
+            Thương hiệu cung cấp thời trang và dụng cụ thể thao chính hãng hàng đầu dành cho sinh viên và người trẻ năng động. Train Hard. Play Strong.
+          </p>
+          <div class="footer-socials">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Khám Phá</h4>
+          <div class="footer-links">
+            <a href="products.html">Tất cả sản phẩm</a>
+            <a href="products.html?category=Shoes">Giày thể thao</a>
+            <a href="products.html?category=Clothing">Quần áo thể thao</a>
+            <a href="products.html?category=Football">Bóng đá & Phụ kiện</a>
+            <a href="products.html?category=Gym">Dụng cụ tập Gym</a>
+            <a href="about.html">Về chúng tôi</a>
+          </div>
+        </div>
+
+        <!-- Customer Service -->
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ Khách Hàng</h4>
+          <div class="footer-links">
+            <a href="javascript:void(0)" onclick="Modal.openSizeGuide()">Bảng tính size chuẩn</a>
+            <a href="contact.html">Chính sách giao hàng</a>
+            <a href="contact.html">Chính sách đổi trả 30 ngày</a>
+            <a href="contact.html">Bảo hành chính hãng</a>
+            <a href="contact.html">Câu hỏi thường gặp (FAQ)</a>
+            <a href="contact.html">Hệ thống showroom</a>
+          </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div>
+          <h4 class="footer-col-title">Đăng Ký Nhận Tin</h4>
+          <p style="color: #94a3b8; font-size: var(--font-xs); line-height: 1.5;">
+            Nhận ngay voucher <strong style="color: var(--primary-color);">giảm 10%</strong> cho đơn hàng đầu tiên cùng thông tin khuyến mãi độc quyền:
+          </p>
+          <form class="newsletter-form" aria-label="Form đăng ký nhận tin">
+            <input type="email" class="newsletter-input" placeholder="Nhập email của bạn..." required aria-label="Địa chỉ email" />
+            <button type="submit" class="newsletter-btn">Đăng Ký</button>
+          </form>
+          <div style="margin-top: 1.25rem;">
+            <span style="font-size: var(--font-xs); color: #94a3b8; display: block; margin-bottom: 0.5rem;">Phương thức thanh toán chấp nhận:</span>
+            <div class="payment-methods">
+              <i class="fa-brands fa-cc-visa" title="Visa"></i>
+              <i class="fa-brands fa-cc-mastercard" title="Mastercard"></i>
+              <i class="fa-solid fa-qrcode" title="VietQR"></i>
+              <i class="fa-solid fa-money-bill-wave" title="COD"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 <strong>SPORTZONE</strong>. Đồ án Thiết kế Web Front-end thương mại điện tử.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html">Điều khoản sử dụng</a>
+          <a href="about.html">Chính sách bảo mật</a>
+          <a href="contact.html">Liên hệ hỗ trợ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core JavaScript Modules -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/utils/storage.js" defer></script>
+  <script src="js/components/toast.js" defer></script>
+  <script src="js/components/product-card.js" defer></script>
+  <script src="js/components/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/home.js" defer></script>
+
+</body>
+</html>

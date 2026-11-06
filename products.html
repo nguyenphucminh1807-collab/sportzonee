@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Danh mục sản phẩm thể thao chính hãng SPORTZONE: Giày chạy bộ, áo đấu, bóng đá, bóng rổ, dụng cụ gym." />
+  <title>Sản Phẩm Thể Thao Chính Hãng - SPORTZONE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/products.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-message">
+        <i class="fa-solid fa-truck-fast text-primary"></i>
+        <span>Miễn phí vận chuyển toàn quốc cho đơn hàng từ <span class="highlight">500.000₫</span></span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:1900888999"><i class="fa-solid fa-phone"></i> Hotline: 1900 888 999</a>
+        <a href="javascript:void(0)" onclick="Modal.openSizeGuide()"><i class="fa-solid fa-ruler"></i> Bảng Size</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="SPORTZONE Trang chủ">
+          <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+          <span>SPORT<span class="logo-accent">ZONE</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Thanh điều hướng chính">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="products.html" class="nav-link active">Sản Phẩm</a>
+          <a href="products.html?category=Shoes" class="nav-link">Giày</a>
+          <a href="products.html?category=Clothing" class="nav-link">Quần Áo</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
+        </nav>
+
+        <div class="header-search">
+          <div class="search-input-wrapper">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" class="search-input" placeholder="Tìm giày, áo đấu, bóng đá..." aria-label="Tìm kiếm sản phẩm" />
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <a href="wishlist.html" class="header-action-btn" title="Sản phẩm yêu thích">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+          <a href="cart.html" class="header-action-btn" title="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+          <a href="login.html" class="header-action-btn user-auth-link" title="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <button class="header-action-btn mobile-menu-toggle" aria-label="Mở menu di động">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size: 1.25rem;">
+        <div class="logo-icon" style="width: 30px; height: 30px;"><i class="fa-solid fa-person-running"></i></div>
+        <span>SPORT<span class="logo-accent">ZONE</span></span>
+      </div>
+      <button class="mobile-drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+      <a href="products.html" class="mobile-nav-link active"><i class="fa-solid fa-shapes"></i> Tất Cả Sản Phẩm</a>
+      <a href="products.html?category=Shoes" class="mobile-nav-link"><i class="fa-solid fa-shoe-prints"></i> Giày Thể Thao</a>
+      <a href="products.html?category=Clothing" class="mobile-nav-link"><i class="fa-solid fa-shirt"></i> Quần Áo Thể Thao</a>
+      <a href="products.html?category=Football" class="mobile-nav-link"><i class="fa-solid fa-futbol"></i> Bóng Đá</a>
+      <a href="products.html?category=Basketball" class="mobile-nav-link"><i class="fa-solid fa-basketball"></i> Bóng Rổ</a>
+      <a href="products.html?category=Gym" class="mobile-nav-link"><i class="fa-solid fa-dumbbell"></i> Dụng Cụ Gym</a>
+      <a href="wishlist.html" class="mobile-nav-link"><i class="fa-solid fa-heart"></i> Sản Phẩm Yêu Thích</a>
+      <a href="cart.html" class="mobile-nav-link"><i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng</a>
+      <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-users"></i> Về SPORTZONE</a>
+      <a href="contact.html" class="mobile-nav-link"><i class="fa-solid fa-envelope"></i> Liên Hệ</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+      <span class="breadcrumb-current">Sản phẩm</span>
+    </nav>
+  </div>
+
+  <!-- Mobile Filter Backdrop -->
+  <div class="mobile-drawer-overlay" id="filter-drawer-overlay"></div>
+
+  <!-- Main Products Catalog Section -->
+  <main class="products-page-section">
+    <div class="container">
+      <div class="products-layout">
+        
+        <!-- Filter Sidebar -->
+        <aside class="filter-sidebar" aria-label="Bộ lọc sản phẩm">
+          <div class="filter-header">
+            <h2 class="filter-title"><i class="fa-solid fa-sliders text-primary"></i> Bộ Lọc</h2>
+            <button type="button" class="btn btn-sm btn-ghost filter-clear-all">Đặt lại</button>
+          </div>
+
+          <!-- Category Filter -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Danh Mục</h3>
+            <div class="category-filter-list">
+              <div class="category-filter-item is-active" data-cat="all">
+                <span>Tất cả môn</span>
+                <span class="category-filter-count">24</span>
+              </div>
+              <div class="category-filter-item" data-cat="Shoes">
+                <span>Giày thể thao</span>
+                <span class="category-filter-count">4</span>
+              </div>
+              <div class="category-filter-item" data-cat="Clothing">
+                <span>Quần áo thể thao</span>
+                <span class="category-filter-count">4</span>
+              </div>
+              <div class="category-filter-item" data-cat="Football">
+                <span>Bóng đá</span>
+                <span class="category-filter-count">4</span>
+              </div>
+              <div class="category-filter-item" data-cat="Basketball">
+                <span>Bóng rổ</span>
+                <span class="category-filter-count">3</span>
+              </div>
+              <div class="category-filter-item" data-cat="Gym">
+                <span>Dụng cụ Gym</span>
+                <span class="category-filter-count">4</span>
+              </div>
+              <div class="category-filter-item" data-cat="Accessories">
+                <span>Phụ kiện & Tennis</span>
+                <span class="category-filter-count">5</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Price Range Slider -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Khoảng Giá (VND)</h3>
+            <div class="price-slider-wrap">
+              <input type="range" min="200000" max="6000000" step="100000" value="6000000" class="price-range-slider" id="price-range-slider" />
+              <div class="price-range-inputs">
+                <span>200.000₫</span>
+                <span id="price-max-label" class="text-primary font-bold">6.000.000₫</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Brand Filter -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Thương Hiệu</h3>
+            <div class="brand-filter-list">
+              <label class="custom-checkbox">
+                <input type="checkbox" class="brand-checkbox" value="Nike" />
+                <span>Nike</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="brand-checkbox" value="Adidas" />
+                <span>Adidas</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="brand-checkbox" value="Puma" />
+                <span>Puma</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="brand-checkbox" value="Under Armour" />
+                <span>Under Armour</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="brand-checkbox" value="Jordan" />
+                <span>Jordan</span>
+              </label>
+              <label class="custom-checkbox">
+                <input type="checkbox" class="brand-checkbox" value="Wilson" />
+                <span>Wilson</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Sizes Filter -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Kích Thước</h3>
+            <div class="size-chips" style="gap: 6px;">
+              <button type="button" class="size-chip filter-size-chip" data-size="39">39</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="40">40</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="41">41</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="42">42</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="43">43</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="44">44</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="S">S</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="M">M</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="L">L</button>
+              <button type="button" class="size-chip filter-size-chip" data-size="XL">XL</button>
+            </div>
+          </div>
+
+          <!-- Rating Filter -->
+          <div class="filter-group">
+            <h3 class="filter-group-title">Đánh Giá</h3>
+            <div style="display: flex; flex-direction: column; gap: 0.5rem; font-size: var(--font-xs);">
+              <label class="custom-radio">
+                <input type="radio" name="filter-rating" value="0" checked />
+                <span>Tất cả đánh giá</span>
+              </label>
+              <label class="custom-radio">
+                <input type="radio" name="filter-rating" value="4.5" />
+                <span class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+                <span>Từ 4.5 sao</span>
+              </label>
+              <label class="custom-radio">
+                <input type="radio" name="filter-rating" value="4.8" />
+                <span class="rating-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                <span>Từ 4.8 sao</span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Products Display -->
+        <section class="products-main" aria-label="Danh sách sản phẩm">
+          <!-- Toolbar -->
+          <div class="products-toolbar">
+            <button type="button" class="mobile-filter-btn" id="mobile-filter-btn">
+              <i class="fa-solid fa-filter"></i> Lọc sản phẩm
+            </button>
+
+            <div class="toolbar-info" id="products-count-display">
+              Đang tải danh sách sản phẩm...
+            </div>
+
+            <div class="toolbar-controls">
+              <!-- Sort Dropdown -->
+              <label for="catalog-sort-select" class="visually-hidden">Sắp xếp</label>
+              <select class="sort-select" id="catalog-sort-select">
+                <option value="default">Sắp xếp: Mặc định</option>
+                <option value="price-asc">Giá: Thấp đến Cao</option>
+                <option value="price-desc">Giá: Cao đến Thấp</option>
+                <option value="rating-desc">Đánh giá cao nhất</option>
+                <option value="newest">Hàng mới về</option>
+                <option value="bestseller">Bán chạy nhất</option>
+              </select>
+
+              <!-- View Mode Toggles -->
+              <div class="view-mode-toggle">
+                <button type="button" class="view-btn is-active" id="view-grid-btn" title="Chế độ lưới" aria-label="Dạng lưới">
+                  <i class="fa-solid fa-grip"></i>
+                </button>
+                <button type="button" class="view-btn" id="view-list-btn" title="Chế độ danh sách" aria-label="Dạng danh sách">
+                  <i class="fa-solid fa-list"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Filter Tags Tray -->
+          <div class="active-filters" id="active-filters-tray"></div>
+
+          <!-- Products Grid -->
+          <div class="products-catalog-grid" id="products-catalog-grid">
+            <!-- Dynamically populated by products.js -->
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination" id="products-pagination">
+            <!-- Dynamically populated -->
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="color: #ffffff;">
+            <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+            <span>SPORT<span class="logo-accent">ZONE</span></span>
+          </a>
+          <p>Trang thương mại điện tử chuyên đồ thể thao cao cấp chính hãng. Train Hard. Play Strong.</p>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Danh Mục</h4>
+          <div class="footer-links">
+            <a href="products.html?category=Shoes">Giày thể thao</a>
+            <a href="products.html?category=Clothing">Quần áo thể thao</a>
+            <a href="products.html?category=Football">Bóng đá</a>
+            <a href="products.html?category=Basketball">Bóng rổ</a>
+            <a href="products.html?category=Gym">Dụng cụ Gym</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="javascript:void(0)" onclick="Modal.openSizeGuide()">Bảng tính size</a>
+            <a href="contact.html">Chính sách đổi trả 30 ngày</a>
+            <a href="contact.html">Vận chuyển & Giao nhận</a>
+            <a href="contact.html">Chính sách bảo hành</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-col-title">Đăng Ký Nhận Tin</h4>
+          <form class="newsletter-form">
+            <input type="email" class="newsletter-input" placeholder="Nhập email..." required />
+            <button type="submit" class="newsletter-btn">Gửi</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 SPORTZONE. Bản quyền thuộc về Đồ án Nhóm Front-end.</div>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/utils/storage.js" defer></script>
+  <script src="js/components/toast.js" defer></script>
+  <script src="js/components/product-card.js" defer></script>
+  <script src="js/components/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/products.js" defer></script>
+
+</body>
+</html>

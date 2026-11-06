@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Danh sách sản phẩm thể thao yêu thích của bạn tại SPORTZONE." />
+  <title>Sản Phẩm Yêu Thích - SPORTZONE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/products.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-message">
+        <i class="fa-solid fa-heart text-primary"></i>
+        <span>Lưu lại những món đồ thể thao bạn yêu thích để nhận thông báo khi có giảm giá</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:1900888999"><i class="fa-solid fa-phone"></i> 1900 888 999</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="SPORTZONE Trang chủ">
+          <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+          <span>SPORT<span class="logo-accent">ZONE</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Thanh điều hướng chính">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="products.html" class="nav-link">Sản Phẩm</a>
+          <a href="products.html?category=Shoes" class="nav-link">Giày</a>
+          <a href="products.html?category=Clothing" class="nav-link">Quần Áo</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="wishlist.html" class="header-action-btn" title="Yêu thích">
+            <i class="fa-solid fa-heart text-primary"></i>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+          <a href="cart.html" class="header-action-btn" title="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+          <a href="login.html" class="header-action-btn user-auth-link" title="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <button class="header-action-btn mobile-menu-toggle" aria-label="Mở menu di động">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size: 1.25rem;">
+        <div class="logo-icon" style="width: 30px; height: 30px;"><i class="fa-solid fa-person-running"></i></div>
+        <span>SPORT<span class="logo-accent">ZONE</span></span>
+      </div>
+      <button class="mobile-drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+      <a href="products.html" class="mobile-nav-link"><i class="fa-solid fa-shapes"></i> Tất Cả Sản Phẩm</a>
+      <a href="wishlist.html" class="mobile-nav-link active"><i class="fa-solid fa-heart"></i> Sản Phẩm Yêu Thích</a>
+      <a href="cart.html" class="mobile-nav-link"><i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+      <span class="breadcrumb-current">Sản phẩm yêu thích</span>
+    </nav>
+  </div>
+
+  <!-- Wishlist Main Section -->
+  <main class="section">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem;">
+        <div>
+          <h1 style="font-size: 1.75rem; font-weight: 800; display: flex; align-items: center; gap: 0.65rem;">
+            <i class="fa-solid fa-heart" style="color: #ef4444;"></i> Danh Sách Yêu Thích
+          </h1>
+          <p style="font-size: var(--font-sm); color: var(--text-muted); margin-top: 0.25rem;">
+            Có <strong id="wishlist-total-count" style="color: var(--primary-color);">0</strong> sản phẩm trong bộ sưu tập yêu thích của bạn
+          </p>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="btn-wishlist-move-all" style="display: none;">
+          <i class="fa-solid fa-cart-plus"></i> Chuyển Tất Cả Vào Giỏ Hàng
+        </button>
+      </div>
+
+      <!-- Wishlist Product Grid -->
+      <div class="grid grid-4 product-grid" id="wishlist-grid"></div>
+
+      <!-- Empty State -->
+      <div id="wishlist-empty-state" class="empty-state" style="display: none;">
+        <div class="empty-state-icon" style="background-color: #fee2e2; color: #ef4444;">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <h2 class="empty-state-title">Chưa có sản phẩm yêu thích nào</h2>
+        <p class="empty-state-desc">
+          Nhấn vào biểu tượng trái tim ở bất kỳ sản phẩm nào để lưu lại và theo dõi giá dễ dàng hơn.
+        </p>
+        <a href="products.html" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-compass"></i> Khám Phá Sản Phẩm Ngay
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 SPORTZONE. Bản quyền thuộc về Đồ án Nhóm Front-end.</div>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/utils/storage.js" defer></script>
+  <script src="js/components/toast.js" defer></script>
+  <script src="js/components/product-card.js" defer></script>
+  <script src="js/components/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/wishlist.js" defer></script>
+
+</body>
+</html>

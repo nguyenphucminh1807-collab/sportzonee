@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Liên hệ với ban hỗ trợ khách hàng SPORTZONE. Hệ thống showroom tại Hà Nội, Đà Nẵng và TP.HCM." />
+  <title>Liên Hệ & Hỗ Trợ - SPORTZONE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/about-contact.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-message">
+        <i class="fa-solid fa-headset text-primary"></i>
+        <span>Đội ngũ tư vấn viên thể thao sẵn sàng hỗ trợ 24/7 qua Hotline: 1900 888 999</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:1900888999"><i class="fa-solid fa-phone"></i> 1900 888 999</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="SPORTZONE Trang chủ">
+          <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+          <span>SPORT<span class="logo-accent">ZONE</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Thanh điều hướng chính">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="products.html" class="nav-link">Sản Phẩm</a>
+          <a href="products.html?category=Shoes" class="nav-link">Giày</a>
+          <a href="products.html?category=Clothing" class="nav-link">Quần Áo</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link active">Liên Hệ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="wishlist.html" class="header-action-btn" title="Yêu thích">
+            <i class="fa-regular fa-heart"></i>
+            <span class="badge-count wishlist-badge" style="display: none;">0</span>
+          </a>
+          <a href="cart.html" class="header-action-btn" title="Giỏ hàng">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="badge-count cart-badge" style="display: none;">0</span>
+          </a>
+          <a href="login.html" class="header-action-btn user-auth-link" title="Tài khoản">
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <button class="header-action-btn mobile-menu-toggle" aria-label="Menu di động">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <div class="mobile-drawer-header">
+      <div class="brand-logo" style="font-size: 1.25rem;">
+        <div class="logo-icon" style="width: 30px; height: 30px;"><i class="fa-solid fa-person-running"></i></div>
+        <span>SPORT<span class="logo-accent">ZONE</span></span>
+      </div>
+      <button class="mobile-drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="mobile-drawer-body">
+      <a href="index.html" class="mobile-nav-link"><i class="fa-solid fa-house"></i> Trang Chủ</a>
+      <a href="products.html" class="mobile-nav-link"><i class="fa-solid fa-shapes"></i> Tất Cả Sản Phẩm</a>
+      <a href="about.html" class="mobile-nav-link"><i class="fa-solid fa-users"></i> Giới Thiệu</a>
+      <a href="contact.html" class="mobile-nav-link active"><i class="fa-solid fa-envelope"></i> Liên Hệ</a>
+    </div>
+  </aside>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+      <span class="breadcrumb-current">Liên hệ</span>
+    </nav>
+  </div>
+
+  <!-- Contact Main Content -->
+  <main class="container">
+    <div class="contact-layout">
+      
+      <!-- Left: Contact Information & Showrooms -->
+      <div>
+        <span class="section-tag"><i class="fa-solid fa-location-dot"></i> Kết Nối Với Chúng Tôi</span>
+        <h1 style="font-size: 2rem; font-weight: 800; margin: 0.5rem 0 1rem;">
+          Chúng Tôi Luôn Lắng Nghe Bạn
+        </h1>
+        <p style="color: var(--text-muted); font-size: var(--font-sm); line-height: 1.6;">
+          Bạn cần tư vấn về kích cỡ giày, thông tin bảo hành sản phẩm hay muốn hợp tác phân phối? Đừng ngần ngại để lại lời nhắn hoặc ghé thăm các showroom của SPORTZONE.
+        </p>
+
+        <div class="contact-info-list">
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fa-solid fa-store"></i></div>
+            <div class="contact-info-text">
+              <strong>Showroom Trưng Bày Chính:</strong>
+              <p>66B Nguyễn Sỹ Sách, Phường 15, Quận Tân Bình, TP. Hồ Chí Minh</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="contact-info-text">
+              <strong>Đường Dây Nóng (Hotline):</strong>
+              <p>1900 888 999 (Miễn cước cuộc gọi, 8h00 - 22h00 các ngày trong tuần)</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="contact-info-text">
+              <strong>Hộp Thư Điện Tử (Email):</strong>
+              <p>support@sportzone.vn - cskh@sportzone.vn</p>
+            </div>
+          </div>
+
+          <div class="contact-info-card">
+            <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div class="contact-info-text">
+              <strong>Thời Gian Mở Cửa:</strong>
+              <p>Thứ Hai - Chủ Nhật: 08:30 - 22:00 (Không nghỉ lễ, Tết)</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Maps: Vi tri showroom SPORTZONE -->
+        <section aria-label="Bản đồ vị trí SPORTZONE" style="margin-top: 2rem;">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+            <h2 style="font-size: 1.2rem; font-weight: 800; margin: 0;">Bản đồ cửa hàng SPORTZONE</h2>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=66B%20Nguy%E1%BB%85n%20S%E1%BB%B9%20S%C3%A1ch%2C%20Ph%C6%B0%E1%BB%9Dng%2015%2C%20Qu%E1%BA%ADn%20T%C3%A2n%20B%C3%ACnh%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+              <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Chỉ đường
+            </a>
+          </div>
+          <div style="width: 100%; height: 320px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-subtle);">
+            <iframe
+              title="Google Maps - SPORTZONE, 66B Nguyễn Sỹ Sách, Tân Bình, TP. Hồ Chí Minh"
+              src="https://maps.google.com/maps?q=66B%20Nguy%E1%BB%85n%20S%E1%BB%B9%20S%C3%A1ch%2C%20Ph%C6%B0%E1%BB%9Dng%2015%2C%20Qu%E1%BA%ADn%20T%C3%A2n%20B%C3%ACnh%2C%20TP.%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=16&ie=UTF8&iwloc=&output=embed"
+              width="100%" height="100%" style="border: 0; display: block;"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+            </iframe>
+          </div>
+          <p style="margin-top: 0.65rem; font-size: var(--font-xs); color: var(--text-muted); line-height: 1.6;">
+            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+            66B Nguyễn Sỹ Sách, Phường 15, Quận Tân Bình, TP. Hồ Chí Minh
+          </p>
+        </section>
+      </div>
+
+      <!-- Right: Contact Form & FAQ Accordion -->
+      <div>
+        <!-- Contact Form Card -->
+        <div class="card" style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.5rem;">Gửi Lời Nhắn Trực Tiếp</h2>
+          <p style="font-size: var(--font-xs); color: var(--text-muted); margin-bottom: 1.5rem;">
+            Phản hồi sẽ được gửi đến email của bạn trong vòng tối đa 24 giờ làm việc.
+          </p>
+
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name" class="form-label required">Họ và tên của bạn</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="Nguyễn Văn A" required />
+            </div>
+
+            <div class="grid grid-2" style="gap: 1rem;">
+              <div class="form-group">
+                <label for="contact-email" class="form-label required">Email liên hệ</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="email@domain.com" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label required">Tiêu đề yêu cầu</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Tư vấn size, khiếu nại..." required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label required">Nội dung chi tiết</label>
+              <textarea id="contact-message" class="form-control" rows="4" placeholder="Nhập câu hỏi hoặc phản hồi của bạn về sản phẩm/dịch vụ..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              <i class="fa-solid fa-paper-plane"></i> Gửi Tin Nhắn Đi
+            </button>
+          </form>
+        </div>
+
+        <!-- FAQ Accordion -->
+        <div>
+          <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem;">Câu Hỏi Thường Gặp (FAQ)</h3>
+          <p style="font-size: var(--font-xs); color: var(--text-muted);">Những thắc mắc phổ biến nhất của các vận động viên:</p>
+
+          <div class="faq-accordion">
+            <div class="faq-item is-open">
+              <div class="faq-question">
+                <span>1. Chính sách đổi size giày thể thao như thế nào?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Bạn được đổi size hoàn toàn miễn phí trong vòng 30 ngày kể từ khi nhận hàng. Yêu cầu sản phẩm còn nguyên tem mác, hộp đựng và chưa qua sử dụng ngoài trời.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>2. Đơn hàng mất bao lâu thì giao tới nơi?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Tại khu vực nội thành TP.HCM và Hà Nội, thời gian giao hàng là 2 giờ (hỏa tốc) hoặc trong ngày. Đối với các tỉnh thành khác trên toàn quốc, thời gian từ 2 - 3 ngày làm việc.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>3. Làm sao để tôi biết sản phẩm mua tại SPORTZONE là chính hãng?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Tất cả sản phẩm tại SPORTZONE đều có hóa đơn VAT, tem phụ nhập khẩu chính ngạch và quét được mã QR/mã vạch xuất xứ trên hệ thống toàn cầu của hãng.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <div class="faq-question">
+                <span>4. Tôi có được kiểm tra hàng trước khi thanh toán không?</span>
+                <i class="fa-solid fa-chevron-down"></i>
+              </div>
+              <div class="faq-answer">
+                Có! Bạn hoàn toàn được đồng kiểm tra kiện hàng, xem mẫu mã và thử độ vừa vặn trước khi thanh toán tiền mặt cho shipper.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 SPORTZONE. Bản quyền thuộc về Đồ án Nhóm Front-end.</div>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/utils/storage.js" defer></script>
+  <script src="js/components/toast.js" defer></script>
+  <script src="js/components/product-card.js" defer></script>
+  <script src="js/components/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/contact.js" defer></script>
+
+</body>
+</html>

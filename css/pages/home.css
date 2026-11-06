@@ -1,0 +1,478 @@
+/* ==========================================================================
+   SPORTZONE - HOME PAGE STYLES
+   ========================================================================== */
+
+/* --- Hero Slider Section --- */
+.hero-slider-section {
+  position: relative;
+  background-color: var(--secondary-dark);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-slider {
+  position: relative;
+  height: 580px;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-slide.is-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.75) 50%, rgba(15, 23, 42, 0.3) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.hero-subtitle-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 77, 0, 0.2);
+  border: 1px solid var(--primary-color);
+  color: #ff8000;
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.25rem;
+}
+
+.hero-title {
+  font-size: clamp(2.25rem, 5vw, 3.75rem);
+  font-weight: var(--weight-extrabold);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  color: var(--primary-color);
+  background: linear-gradient(135deg, #ff4d00 0%, #ff8000 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  font-size: var(--font-md);
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Slider Controls */
+.hero-slider-nav {
+  position: absolute;
+  bottom: 24px;
+  right: var(--container-padding);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-dot {
+  width: 32px;
+  height: 4px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.slider-dot.is-active {
+  background: var(--primary-color);
+  width: 48px;
+}
+
+.slider-arrow-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.slider-arrow-btn:hover {
+  background: var(--primary-color);
+}
+
+/* --- Featured Categories Grid --- */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.category-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  background-color: var(--secondary-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  color: #ffffff;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px -4px rgba(15, 23, 42, 0.15);
+}
+
+.category-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.85);
+}
+
+.category-card:hover .category-card-img {
+  transform: scale(1.1);
+  filter: brightness(0.95);
+}
+
+.category-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0) 30%, rgba(15, 23, 42, 0.85) 100%);
+  z-index: 1;
+}
+
+.category-card-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.category-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  margin: 0 auto 0.65rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  color: #ffffff;
+  transition: all var(--transition-fast);
+}
+
+.category-card:hover .category-card-icon {
+  background: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.category-card-title {
+  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  margin-bottom: 0.25rem;
+  color: #ffffff;
+}
+
+.category-card-count {
+  font-size: var(--font-xs);
+  color: #cbd5e1;
+}
+
+/* --- Flash Sale Countdown Section --- */
+.flash-sale-section {
+  background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  margin: 2rem 0;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.4);
+}
+
+.flash-sale-section::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.flash-sale-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5rem;
+}
+
+.flash-sale-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flash-sale-badge {
+  background: linear-gradient(135deg, #ef4444 0%, #ff4d00 100%);
+  color: #ffffff;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-extrabold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  animation: pulse 2s infinite;
+}
+
+.flash-sale-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: var(--weight-extrabold);
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* Countdown Timer */
+.countdown-timer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.countdown-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.85rem;
+  min-width: 60px;
+  text-align: center;
+}
+
+.countdown-number {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: var(--weight-extrabold);
+  color: #ffffff;
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.countdown-sep {
+  font-size: 1.25rem;
+  font-weight: var(--weight-bold);
+  color: var(--primary-color);
+}
+
+/* --- Why SPORTZONE? Features --- */
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.why-us-card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all var(--transition-normal);
+}
+
+.why-us-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 20px -5px rgba(255, 77, 0, 0.1);
+}
+
+.why-us-icon-wrap {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.why-us-card:hover .why-us-icon-wrap {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  transform: rotate(8deg) scale(1.05);
+}
+
+.why-us-title {
+  font-size: 1.1rem;
+  font-weight: var(--weight-bold);
+  margin-bottom: 0.5rem;
+}
+
+.why-us-desc {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* --- Sport Finder Teaser Banner (Creative Feature) --- */
+.sport-finder-banner {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #1e293b 100%);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.sport-finder-banner::after {
+  content: '⚡';
+  position: absolute;
+  right: 5%;
+  bottom: -20px;
+  font-size: 16rem;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.sport-finder-content {
+  max-width: 580px;
+  position: relative;
+  z-index: 2;
+}
+
+.sport-finder-title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: var(--weight-extrabold);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.sport-finder-title span {
+  color: var(--primary-color);
+}
+
+.sport-finder-desc {
+  font-size: var(--font-base);
+  color: #94a3b8;
+  margin-bottom: 1.75rem;
+}
+
+/* Responsive adjustments for Home */
+@media (max-width: 991px) {
+  .categories-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .why-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sport-finder-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .hero-slider {
+    height: 480px;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+  .flash-sale-section {
+    padding: 2rem 1.25rem;
+  }
+  .flash-sale-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Sport Finder AI: mau nut da chon giong mau hover */
+#sportfinder-modal .quiz-opt.is-active {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    box-shadow: none;
+    transform: none;
+}
+
+#sportfinder-modal .quiz-opt.is-active:hover {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}

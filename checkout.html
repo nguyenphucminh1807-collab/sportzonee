@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thanh toán đơn hàng nhanh chóng, bảo mật tại SPORTZONE." />
+  <title>Thanh Toán Đơn Hàng - SPORTZONE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/checkout.css" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar">
+    <div class="container">
+      <div class="top-bar-message">
+        <i class="fa-solid fa-lock text-primary"></i>
+        <span>Hệ thống thanh toán bảo mật 256-bit SSL &bull; Cam kết hoàn tiền 100% nếu có sự cố</span>
+      </div>
+      <div class="top-bar-links">
+        <a href="tel:1900888999"><i class="fa-solid fa-phone"></i> Hỗ trợ đặt hàng: 1900 888 999</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="SPORTZONE Trang chủ">
+          <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+          <span>SPORT<span class="logo-accent">ZONE</span></span>
+        </a>
+
+        <nav class="main-nav" aria-label="Thanh điều hướng chính">
+          <a href="index.html" class="nav-link">Trang Chủ</a>
+          <a href="products.html" class="nav-link">Sản Phẩm</a>
+          <a href="about.html" class="nav-link">Giới Thiệu</a>
+          <a href="contact.html" class="nav-link">Liên Hệ</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="cart.html" class="btn btn-sm btn-outline">
+            <i class="fa-solid fa-arrow-left"></i> Quay lại giỏ hàng
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumb -->
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Trang chủ</a>
+      <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+      <a href="cart.html">Giỏ hàng</a>
+      <span class="breadcrumb-separator"><i class="fa-solid fa-chevron-right" style="font-size: 0.7rem;"></i></span>
+      <span class="breadcrumb-current">Thanh toán</span>
+    </nav>
+  </div>
+
+  <!-- Checkout Page Section -->
+  <main class="checkout-page-section">
+    <div class="container">
+      <form id="checkout-form" novalidate>
+        <div class="checkout-layout">
+          
+          <!-- Left Column: Forms -->
+          <div>
+            
+            <!-- Step 1: Customer Information -->
+            <div class="checkout-card">
+              <h2 class="checkout-card-title">
+                <span class="step-num">1</span> Thông Tin Khách Hàng & Giao Nhận
+              </h2>
+
+              <div class="form-group">
+                <label for="checkout-fullname" class="form-label required">Họ và tên người nhận</label>
+                <input type="text" id="checkout-fullname" class="form-control" placeholder="Ví dụ: Nguyễn Văn An" />
+                <span class="form-error" id="error-fullname" style="display: none;"></span>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1rem;">
+                <div class="form-group">
+                  <label for="checkout-email" class="form-label required">Địa chỉ Email</label>
+                  <input type="email" id="checkout-email" class="form-control" placeholder="email@example.com" />
+                  <span class="form-error" id="error-email" style="display: none;"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="checkout-phone" class="form-label required">Số điện thoại liên hệ</label>
+                  <input type="tel" id="checkout-phone" class="form-control" placeholder="Ví dụ: 0912345678" />
+                  <span class="form-error" id="error-phone" style="display: none;"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="checkout-address" class="form-label required">Địa chỉ nhận hàng chi tiết</label>
+                <input type="text" id="checkout-address" class="form-control" placeholder="Số nhà, tên ngõ/đường, tòa nhà/căn hộ..." />
+                <span class="form-error" id="error-address" style="display: none;"></span>
+              </div>
+
+              <div class="grid grid-2" style="gap: 1rem;">
+                <div class="form-group">
+                  <label for="checkout-city" class="form-label required">Tỉnh / Thành phố</label>
+                  <select id="checkout-city" class="form-control">
+                    <option value="">-- Chọn Tỉnh / Thành phố --</option>
+                    <option value="HN">Hà Nội</option>
+                    <option value="HCM" selected>TP. Hồ Chí Minh</option>
+                    <option value="DN">Đà Nẵng</option>
+                    <option value="HP">Hải Phòng</option>
+                    <option value="CT">Cần Thơ</option>
+                    <option value="BD">Bình Dương</option>
+                    <option value="DNA">Đồng Nai</option>
+                  </select>
+                  <span class="form-error" id="error-city" style="display: none;"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="checkout-district" class="form-label required">Quận / Huyện</label>
+                  <select id="checkout-district" class="form-control">
+                    <option value="">-- Chọn Quận / Huyện --</option>
+                    <option value="Q1" selected>Quận 1</option>
+                    <option value="Q3">Quận 3</option>
+                    <option value="Q7">Quận 7</option>
+                    <option value="BT">Bình Thạnh</option>
+                    <option value="TD">Thủ Đức</option>
+                    <option value="CG">Cầu Giấy</option>
+                    <option value="BD">Ba Đình</option>
+                  </select>
+                  <span class="form-error" id="error-district" style="display: none;"></span>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: 0;">
+                <label for="checkout-notes" class="form-label">Ghi chú cho shipper (Tùy chọn)</label>
+                <textarea id="checkout-notes" class="form-control" rows="2" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi đến 15 phút..."></textarea>
+              </div>
+            </div>
+
+            <!-- Step 2: Shipping Method -->
+            <div class="checkout-card">
+              <h2 class="checkout-card-title">
+                <span class="step-num">2</span> Phương Thức Vận Chuyển
+              </h2>
+
+              <div class="shipping-methods-grid">
+                <div class="shipping-method-option is-selected" data-method="standard">
+                  <div class="shipping-method-header">
+                    <span><input type="radio" name="shipping-method" checked /> Giao Tiêu Chuẩn</span>
+                    <span class="text-primary font-bold">30.000₫</span>
+                  </div>
+                  <div class="shipping-method-time">Nhận hàng sau 2 - 4 ngày làm việc</div>
+                </div>
+
+                <div class="shipping-method-option" data-method="express">
+                  <div class="shipping-method-header">
+                    <span><input type="radio" name="shipping-method" /> Giao Hỏa Tốc 24H</span>
+                    <span class="text-primary font-bold">50.000₫</span>
+                  </div>
+                  <div class="shipping-method-time">Nhận hàng ngay trong 24h nội thành</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3: Payment Method -->
+            <div class="checkout-card">
+              <h2 class="checkout-card-title">
+                <span class="step-num">3</span> Phương Thức Thanh Toán
+              </h2>
+
+              <div class="payment-methods-list">
+                
+                <!-- COD -->
+                <div class="payment-method-card is-selected" data-payment="cod">
+                  <div class="payment-method-header">
+                    <input type="radio" name="payment-method" checked />
+                    <span class="payment-method-title">Thanh toán khi nhận hàng (COD)</span>
+                    <div class="payment-method-icons"><i class="fa-solid fa-money-bill-wave text-success"></i></div>
+                  </div>
+                  <div class="payment-method-content">
+                    Bạn chỉ cần thanh toán bằng tiền mặt trực tiếp cho nhân viên giao hàng khi nhận và kiểm tra kiện hàng.
+                  </div>
+                </div>
+
+                <!-- VietQR Bank Transfer -->
+                <div class="payment-method-card" data-payment="bank">
+                  <div class="payment-method-header">
+                    <input type="radio" name="payment-method" />
+                    <span class="payment-method-title">Chuyển khoản VietQR tự động (Miễn phí giao dịch)</span>
+                    <div class="payment-method-icons"><i class="fa-solid fa-qrcode text-primary"></i></div>
+                  </div>
+                  <div class="payment-method-content">
+                    <div class="qr-pay-box">
+                      <!-- VietQR Demo Mock -->
+                      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SPORTZONE-PAYMENT-DEMO" alt="Mã VietQR Thanh Toán" class="qr-code-img" />
+                      <div style="flex: 1;">
+                        <div class="bank-info-item">Ngân hàng: <strong>MBBank (Ngân hàng Quân Đội)</strong></div>
+                        <div class="bank-info-item">Số tài khoản: <strong id="bank-acc-num">19038472910018</strong></div>
+                        <div class="bank-info-item">Chủ tài khoản: <strong>CONG TY SPORTZONE VIETNAM</strong></div>
+                        <div class="bank-info-item">Nội dung CK: <strong>SZ [Số Điện Thoại]</strong></div>
+                        <button type="button" class="btn btn-sm btn-outline" id="btn-copy-bank" style="margin-top: 0.35rem;">
+                          <i class="fa-regular fa-copy"></i> Sao chép STK
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Credit / Debit Card -->
+                <div class="payment-method-card" data-payment="card">
+                  <div class="payment-method-header">
+                    <input type="radio" name="payment-method" />
+                    <span class="payment-method-title">Thẻ tín dụng / Ghi nợ quốc tế (Visa, Mastercard, JCB)</span>
+                    <div class="payment-method-icons">
+                      <i class="fa-brands fa-cc-visa"></i>
+                      <i class="fa-brands fa-cc-mastercard"></i>
+                    </div>
+                  </div>
+                  <div class="payment-method-content">
+                    <div class="form-group">
+                      <label class="form-label">Số thẻ tín dụng</label>
+                      <input type="text" id="card-number" class="form-control" placeholder="4123 4567 8901 2345" maxlength="19" />
+                    </div>
+                    <div class="grid grid-2" style="gap: 1rem;">
+                      <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Ngày hết hạn (MM/YY)</label>
+                        <input type="text" id="card-exp" class="form-control" placeholder="12/28" maxlength="5" />
+                      </div>
+                      <div class="form-group" style="margin-bottom: 0;">
+                        <label class="form-label">Mã bảo mật CVV</label>
+                        <input type="password" id="card-cvv" class="form-control" placeholder="***" maxlength="4" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Order Overview -->
+          <div>
+            <div class="order-summary-card" style="position: sticky; top: 90px;">
+              <h2 class="summary-title">Đơn Hàng Của Bạn</h2>
+
+              <!-- Product items preview -->
+              <div class="checkout-review-items" id="checkout-review-items">
+                <!-- Injected by checkout.js -->
+              </div>
+
+              <!-- Price Breakdown -->
+              <div class="summary-row">
+                <span>Tạm tính hàng:</span>
+                <span id="checkout-subtotal">0₫</span>
+              </div>
+              <div class="summary-row">
+                <span>Voucher ưu đãi:</span>
+                <span id="checkout-discount" class="text-success">-0₫</span>
+              </div>
+              <div class="summary-row">
+                <span>Phí vận chuyển:</span>
+                <span id="checkout-shipping">30.000₫</span>
+              </div>
+
+              <div class="summary-total-row">
+                <span class="summary-total-label">Tổng thanh toán:</span>
+                <span class="summary-total-price" id="checkout-total">0₫</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg btn-block" id="btn-submit-order">
+                <i class="fa-solid fa-shield-check"></i> Xác Nhận Đặt Hàng
+              </button>
+
+              <p style="font-size: 0.75rem; color: var(--text-muted); text-align: center; margin-top: 1rem;">
+                Bằng việc nhấn "Xác Nhận Đặt Hàng", bạn đồng ý với các điều khoản mua bán của SPORTZONE.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom" style="border: none;">
+        <div>&copy; 2026 SPORTZONE. Bảo lưu mọi quyền. Đồ án Thiết kế Web Front-end.</div>
+        <div class="payment-methods">
+          <i class="fa-brands fa-cc-visa"></i>
+          <i class="fa-brands fa-cc-mastercard"></i>
+          <i class="fa-solid fa-qrcode"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/utils/storage.js" defer></script>
+  <script src="js/components/toast.js" defer></script>
+  <script src="js/components/product-card.js" defer></script>
+  <script src="js/components/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/checkout.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Đăng nhập tài khoản thành viên SPORTZONE để tích điểm và nhận ưu đãi độc quyền." />
+  <title>Đăng Nhập Tài Khoản - SPORTZONE</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS Design System & Components -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/pages/auth.css" />
+</head>
+<body>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="brand-logo" aria-label="SPORTZONE Trang chủ">
+          <div class="logo-icon"><i class="fa-solid fa-person-running"></i></div>
+          <span>SPORT<span class="logo-accent">ZONE</span></span>
+        </a>
+
+        <div class="header-actions">
+          <a href="index.html" class="btn btn-sm btn-outline">
+            <i class="fa-solid fa-house"></i> Về Trang Chủ
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Auth Main Section -->
+  <main class="auth-page-section">
+    <div class="container">
+      <div class="auth-card">
+        
+        <div class="auth-header">
+          <h1 class="auth-title">Chào Mừng Trở Lại</h1>
+          <p class="auth-subtitle">Đăng nhập để theo dõi đơn hàng và nhận ưu đãi riêng cho bạn</p>
+        </div>
+
+        <div class="auth-tabs">
+          <a href="login.html" class="auth-tab-link is-active">Đăng Nhập</a>
+          <a href="register.html" class="auth-tab-link">Tạo Tài Khoản</a>
+        </div>
+
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="login-email" class="form-label required">Địa chỉ Email</label>
+            <input type="email" id="login-email" class="form-control" placeholder="name@domain.com" value="athlete@sportzone.vn" required />
+            <span class="form-error" id="login-error-email" style="display: none;"></span>
+          </div>
+
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: baseline;">
+              <label for="login-password" class="form-label required">Mật khẩu</label>
+              <a href="javascript:void(0)" onclick="Toast.info('Quên mật khẩu', 'Vui lòng kiểm tra hộp thư email để đặt lại mật khẩu.')" style="font-size: var(--font-xs); color: var(--primary-color);">Quên mật khẩu?</a>
+            </div>
+            <div class="password-input-wrapper">
+              <input type="password" id="login-password" class="form-control" placeholder="••••••••" value="123456" required />
+              <button type="button" class="password-toggle-btn" aria-label="Hiện/ẩn mật khẩu">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            <span class="form-error" id="login-error-password" style="display: none;"></span>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label class="custom-checkbox">
+              <input type="checkbox" id="login-remember" checked />
+              <span>Ghi nhớ đăng nhập trong 30 ngày</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" id="btn-login-submit">
+            Đăng Nhập <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>Hoặc tiếp tục với</span>
+        </div>
+
+        <div class="social-auth-grid">
+          <button type="button" class="social-btn" onclick="Toast.info('Liên kết', 'Đang chuyển hướng xác thực Google...')">
+            <i class="fa-brands fa-google text-danger"></i> Google
+          </button>
+          <button type="button" class="social-btn" onclick="Toast.info('Liên kết', 'Đang chuyển hướng xác thực Facebook...')">
+            <i class="fa-brands fa-facebook text-primary"></i> Facebook
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 SPORTZONE. Train Hard. Play Strong.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data/products.js" defer></script>
+  <script src="js/utils/storage.js" defer></script>
+  <script src="js/components/toast.js" defer></script>
+  <script src="js/components/product-card.js" defer></script>
+  <script src="js/components/modal.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/pages/auth.js" defer></script>
+
+</body>
+</html>
