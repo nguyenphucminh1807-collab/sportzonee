@@ -390,38 +390,13 @@ Menu di động được triển khai theo dạng Drawer, có lớp phủ, hỗ 
 
 ## 8. Thành viên nhóm
 
-Dự án có 5 thành viên:
-
-| Thành viên | Vai trò / nhiệm vụ chính |
-|---|---|
-| **Lê Cường Bảo** | Trưởng Nhóm &
-Front-End Lead
-Điều phối và phân chia công việc trong nhóm.
-Định hướng phát triển giao diện Front-End,
-xây dựng cấu trúc các trang và đảm bảo tính
-thống nhất của website SportZone |
-| **Nguyễn Phúc Minh** | UI/UX Designer Nghiên cứu trải nghiệm người dùng, thiết kế
-bố cục và giao diện các trang. Định hướng
-màu sắc, kiểu chữ, thành phần hiển thị và
-tính nhất quán trong thiết kế website |
-| **Lưu Trọng Nguyên** | JavaScript
-Developer
-Phát triển các chức năng tương tác bằng
-JavaScript. Xử lý sự kiện người dùng, thao
-tác sản phẩm, giỏ hàng và các chức năng
-động trên website. |
-| **Nguyễn Nhật Huy** | Product & Data
-Developer
-Tổ chức dữ liệu sản phẩm, xây dựng và quản
-lý dữ liệu phục vụ website. Hỗ trợ xử lý
-thông tin sản phẩm và kết nối dữ liệu với các
-chức năng giao diện. |
-| **Lý Tuấn Hoằng** | Quality Assurance
-& Content
-Kiểm tra giao diện và chức năng website, ghi
-nhận lỗi và hỗ trợ đánh giá chất lượng. Xây
-dựng, rà soát nội dung hiển thị và thông tin
-sản phẩm. |
+| STT | Thành viên | Vai trò | Nhiệm vụ chính |
+|:---:|---|---|---|
+| 1 | **Lê Cường Bảo** | **Trưởng nhóm & Front-End Lead** | Điều phối và phân chia công việc trong nhóm. Định hướng phát triển giao diện Front-End, xây dựng cấu trúc các trang và đảm bảo tính thống nhất của website SPORTZONE. |
+| 2 | **Nguyễn Phúc Minh** | UI/UX Designer | Nghiên cứu trải nghiệm người dùng, thiết kế bố cục và giao diện các trang. Định hướng màu sắc, kiểu chữ, thành phần hiển thị và tính nhất quán trong thiết kế website. |
+| 3 | **Lưu Trọng Nguyên** | JavaScript Developer | Phát triển các chức năng tương tác bằng JavaScript. Xử lý sự kiện người dùng, thao tác sản phẩm, giỏ hàng và các chức năng động trên website. |
+| 4 | **Nguyễn Nhật Huy** | Product & Data Developer | Tổ chức dữ liệu sản phẩm, xây dựng và quản lý dữ liệu phục vụ website. Hỗ trợ xử lý thông tin sản phẩm và kết nối dữ liệu với các chức năng giao diện. |
+| 5 | **Lý Tuấn Hoàng** | Quality Assurance & Content | Kiểm tra giao diện và chức năng website, ghi nhận lỗi và hỗ trợ đánh giá chất lượng. Xây dựng, rà soát nội dung hiển thị và thông tin sản phẩm. |
 
 
 
