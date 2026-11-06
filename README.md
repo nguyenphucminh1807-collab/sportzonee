@@ -392,15 +392,38 @@ Menu di động được triển khai theo dạng Drawer, có lớp phủ, hỗ 
 
 Dự án có 5 thành viên:
 
-| Thành viên | Vai trò / nhiệm vụ dự kiến |
+| Thành viên | Vai trò / nhiệm vụ chính |
 |---|---|
-| **Lê Cường Bảo** | Nhóm trưởng; quản lý cấu trúc dự án, phát triển trang chủ và tích hợp chức năng |
-| **Nguyễn Phúc Minh** | Phát triển trang sản phẩm, tìm kiếm, lọc và sắp xếp |
-| **Lưu Trọng Nguyên** | Phát triển Wishlist, giỏ hàng và Checkout |
-| **Nguyễn Nhật Huy** | Thiết kế giao diện chung, Responsive và tối ưu CSS |
-| **Lý Tuấn Hoằng** | Phát triển tài khoản, liên hệ và hỗ trợ kiểm thử |
+| **Lê Cường Bảo** | Trưởng Nhóm &
+Front-End Lead
+Điều phối và phân chia công việc trong nhóm.
+Định hướng phát triển giao diện Front-End,
+xây dựng cấu trúc các trang và đảm bảo tính
+thống nhất của website SportZone |
+| **Nguyễn Phúc Minh** | UI/UX Designer Nghiên cứu trải nghiệm người dùng, thiết kế
+bố cục và giao diện các trang. Định hướng
+màu sắc, kiểu chữ, thành phần hiển thị và
+tính nhất quán trong thiết kế website |
+| **Lưu Trọng Nguyên** | JavaScript
+Developer
+Phát triển các chức năng tương tác bằng
+JavaScript. Xử lý sự kiện người dùng, thao
+tác sản phẩm, giỏ hàng và các chức năng
+động trên website. |
+| **Nguyễn Nhật Huy** | Product & Data
+Developer
+Tổ chức dữ liệu sản phẩm, xây dựng và quản
+lý dữ liệu phục vụ website. Hỗ trợ xử lý
+thông tin sản phẩm và kết nối dữ liệu với các
+chức năng giao diện. |
+| **Lý Tuấn Hoằng** | Quality Assurance
+& Content
+Kiểm tra giao diện và chức năng website, ghi
+nhận lỗi và hỗ trợ đánh giá chất lượng. Xây
+dựng, rà soát nội dung hiển thị và thông tin
+sản phẩm. |
 
-> Phân công trên là phương án nhóm đang thống nhất để tổ chức công việc; cần cập nhật README nếu nhiệm vụ thực tế có thay đổi.
+
 
 ---
 
@@ -433,6 +456,3 @@ SPORTZONE là sản phẩm học tập tập trung vào Frontend. Một số gi�
 
 ---
 
-## Ghi chú
-
-README này mô tả source code Frontend hiện có trong dự án SPORTZONE. Khi dự án được bổ sung Backend, triển khai lên hosting hoặc thay đổi phân công, nhóm nên cập nhật lại tài liệu để nội dung luôn khớp với phiên bản mã nguồn mới nhất.
